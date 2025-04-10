@@ -1,0 +1,98 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Dancing Script', cursive;
+  background: linear-gradient(135deg, #ff99cc, #ff66b3);
+  color: #fff;
+  text-align: center;
+}
+
+/* Glitter Text Effect */
+.glitter-text {
+  font-size: 3rem;
+  background: linear-gradient(45deg, #ff66b3, #ff99cc, #ff66b3);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glitter 5s infinite alternate;
+}
+
+.glitter-subtext {
+  font-size: 1.5rem;
+  color: #fff;
+  text-shadow: 0 0 10px #ff66b3, 0 0 20px #ff66b3;
+}
+
+@keyframes glitter {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+/* Header */
+.glitter-header {
+  padding: 50px;
+  background: linear-gradient(45deg, #ff66b3, #ff99cc, #ff66b3);
+  background-size: 300% 300%;
+  animation: glitter 5s infinite alternate;
+}
+
+/* Snow Leopard Section */
+.snow-leopard-section {
+  padding: 50px;
+}
+
+.snow-leopard-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.snow-leopard {
+  width: 150px;
+  height: 100px;
+  background: url('assets/snow-leopard.png') no-repeat center/cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.snow-leopard::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.snow-leopard:hover {
+  transform: scale(1.2) rotate(10deg);
+  box-shadow: 0 0 20px #ff66b3, 0 0 40px #ff66b3;
+}
+
+.snow-leopard:hover::after {
+  opacity: 1;
+}
+
+/* Sparkle Section */
+#sparkle-canvas {
+  width: 100%;
+  height: 400px;
+  display: block;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  background: #ff66b3;
+}
